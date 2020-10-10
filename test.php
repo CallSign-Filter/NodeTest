@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 
 while ($row = mysqli_fetch_array($result)) {
- echo $row['bbqDate'] . ' ' . $row['fantasyWeek'] . $row['hostName'] . $row['hostTeam']  '<br />';
+ echo $row['bbqDate'] . ' ' . $row['fantasyWeek'] . ' ' . $row['hostName'] . ' ' . $row['hostTeam'] . '<br />';
 }
 
 mysqli_close($conn);
