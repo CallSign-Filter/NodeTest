@@ -99,6 +99,15 @@ mysqli_close($conn);
 ?>
 <button type="button" onclick="prompt('What is your name?')">Sign up</button>
 <button id="myBtn">Open Modal</button>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some other text in the Modal..</p>
+  </div>
+
+</div>
 </body>
 <div id="myModal" class="modal">
 
