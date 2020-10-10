@@ -32,6 +32,6 @@ while ($row = mysqli_fetch_array($result)) {
 
 mysqli_close($conn);
 ?>
-
+<button type="button" onclick="prompt('What is your name?')">Sign up</button>
 </body>
 </html>
