@@ -1,11 +1,20 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	This is page 1
-	390.l.368174
--->
+<?php
+$servername = "localhost";
+$database = "u379769495_bbq";
+$username = "u379769495_root";
+$password = "USMC44eva";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$query = "SELECT * FROM bbq_day";
+mysqli_query($conn, $query) or die('Error querying database.');
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_array($result);
+?>
 <html>
 <head>
     <title>Brandon Hessler</title>
@@ -107,7 +116,7 @@
             <li><a href="fantasy2019.html">Fantasy 2019</a></li>
             <li><a href="fantasy2018.html">Fantasy 2018</a></li>
             <li><a href="fantasy2017.html">Fantasy 2017</a></li>
-            <li class="active"><a href="sunday.html">Sunday Sign-up</a></li>
+            <li class="active"><a href="sunday.php">Sunday Sign-up</a></li>
         </ul>
     </nav>
 
@@ -126,74 +135,19 @@
             </article>
 
             <article class="artBg">
+             <?php foreach($array as $key=>$value): ?>
+                <tr>
+                    <td><?php echo $key; ?></td>
+                </tr>
+                <?php endforeach; ?>
+            <?php while ($row = mysqli_fetch_array($result)) {?>
                 <div class="float-child calendarDate">
                     <div class="calendar">
-                        <a class="center">Week 4: 10/4</a>
+                        <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo $row['bbqDate']?></a>
                     </div>
+                    <?php echo $row['hostName'] . ' ' . $row['hostTeam'] ?>
                 </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 5: 10/11</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 6: 10/18</a>
-                    </div>
-                    Jim Saucey_Nuts
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 7: 10/25</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 8: 11/1</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 9: 11/8</a>
-                    </div>
-                    Lee-Ann #Huntin_Cunt
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 10: 11/15</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 11: 11/22</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 12: 11/29</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 13: 12/6</a>
-                    </div>
-                    Jackson Hessler
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 14: 12/13</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Week 15: 12/20</a>
-                    </div>
-                </div>
-                <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center">Championship: 12/27</a>
-                    </div>
-                </div>
+            <?php } mysqli_close($conn); ?>
             </article>
         </article>
     </div>
