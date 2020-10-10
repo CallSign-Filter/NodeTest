@@ -79,7 +79,7 @@ echo "Connected successfully";
    text-decoration: none;
    cursor: pointer;
  }
- </style
+ </style>
  </head>
  <body>
  <h1>PHP connect to MySQL</h1>
