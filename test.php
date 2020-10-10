@@ -34,7 +34,7 @@ mysqli_close($conn);
 ?>
 <button type="button" onclick="prompt('What is your name?')">Sign up</button>
 
-<form action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
+<form action="insert.php" method="post">
     <input type="hidden" id="bbqDayId" name="bbqDayId" value="5"/>
     <p>
         <label for="hostName">Host Name:</label>
