@@ -25,7 +25,11 @@ $query = "SELECT * FROM bbq_day";
 mysqli_query($conn, $query) or die('Error querying database.');
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
+?>
 
+<h3>Something</h3>
+
+<?php
 while ($row = mysqli_fetch_array($result)) {
  echo $row['bbqDate'] . ' ' . $row['fantasyWeek'] . ' ' . $row['hostName'] . ' ' . $row['hostTeam'] . '<br />';
 }
