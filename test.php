@@ -10,7 +10,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
-mysqli_close($conn);
+
 ?>
 
 <html>
@@ -29,6 +29,8 @@ $row = mysqli_fetch_array($result);
 while ($row = mysqli_fetch_array($result)) {
  echo $row['bbqDate'] . ' ' . $row['fantasyWeek'] .'<br />';
 }
+
+mysqli_close($conn);
 ?>
 
 </body>
