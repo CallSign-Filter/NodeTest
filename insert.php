@@ -23,7 +23,7 @@ $hostName = mysqli_real_escape_string($conn, $_REQUEST['hostName']);
 $hostTeam = mysqli_real_escape_string($conn, $_REQUEST['hostTeam']);
 
 // Attempt insert query execution
-$sql = "UPDATE bbq_day SET hostName= $hostName, hostTeam = $hostTeam WHERE bbqDayId= $bbqDayId";
+$sql = "UPDATE bbq_day SET hostName= '$hostName', hostTeam = '$hostTeam' WHERE bbqDayId= $bbqDayId";
 if(mysqli_query($conn, $sql)){
     echo "Records added successfully.";
 } else{
