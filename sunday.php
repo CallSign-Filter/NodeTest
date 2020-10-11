@@ -147,7 +147,7 @@ $row = mysqli_fetch_array($result);
                     </div>
                     <?php if (strlen(trim($row['hostName'])) == 0) { ?>
                     <a>sign up</a>
-                    <?php } ?>
+                    <?php } else { echo $row['hostName'] . ' ' . $row['hostTeam'] }?>
                 </div>
             <?php } mysqli_close($conn); ?>
             </article>
