@@ -151,7 +151,7 @@ $row = mysqli_fetch_array($result);
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php if (strlen(trim($row['hostName'])) == 0) { ?>
-                    <form class="smform" action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
+                    <form class="smform" action="insert.php" method="post">
                         <input type="hidden" id="bbqDayId" name="bbqDayId" value="<?php echo $row['bbqDayId']?>"/>
                         <input class="smform" type="text" name="hostName" id="hostName" placeholder="Host Name">
                         <input class="smform" type="text" name="hostTeam" id="hostTeam" placeholder="Host Team">
