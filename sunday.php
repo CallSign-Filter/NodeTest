@@ -145,10 +145,10 @@ $row = mysqli_fetch_array($result);
                     <div class="calendar" style="padding-top: 5px">
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
-                    <?php echo if($row['hostName'] == '') {
-                                    'sign up'
+                    <?php if($row['hostName'] = '') {
+                                    echo 'sign up'
                                     } else {
-                                     ' ' . $row['hostTeam']
+                                     echo ' ' . $row['hostTeam']
                                       }?>
                 </div>
             <?php } mysqli_close($conn); ?>
