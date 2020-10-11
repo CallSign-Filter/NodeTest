@@ -32,7 +32,8 @@ $row = mysqli_fetch_array($result);
     <style>
         input.smform {
             font-size: 10px;
-            height: 35px
+            height: 35px;
+            line-height: 10px;
         }
         img {
             width: 100%;
