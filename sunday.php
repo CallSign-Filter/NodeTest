@@ -143,7 +143,7 @@ $row = mysqli_fetch_array($result);
             <?php while ($row = mysqli_fetch_array($result)) {?>
                 <div class="float-child calendarDate">
                     <div class="calendar">
-                        <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 6)?></a>
+                        <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php echo $row['hostName'] . ' ' . $row['hostTeam'] ?>
                 </div>
