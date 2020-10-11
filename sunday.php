@@ -30,8 +30,9 @@ $row = mysqli_fetch_array($result);
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
-    form.smform input {
-        font-size: 10px
+    form.smform > input {
+        font-size: 10px;
+        height: 35px
     }
     form.smform label {
             font-size: 10px
@@ -150,10 +151,10 @@ $row = mysqli_fetch_array($result);
                     <form class="smform" action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
                         <input type="hidden" id="bbqDayId" name="bbqDayId" value="<?php echo $row['bbqDayId']?>"/>
                         <p>
-                            <input type="text" name="hostName" id="hostName" style="placeholder: 'Host Name'">
+                            <input type="text" name="hostName" id="hostName" placeholder="Host Name">
                         </p>
                         <p>
-                            <input type="text" name="hostTeam" id="hostTeam" style="placeholder: 'Host Team'">
+                            <input type="text" name="hostTeam" id="hostTeam" placeholder="Host Team">
                         </p>
                         <input type="submit" value="Submit">
                     </form>
