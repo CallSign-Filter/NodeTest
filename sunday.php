@@ -146,10 +146,10 @@ $row = mysqli_fetch_array($result);
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php
-                        if ( 'a' == '') {
-                            echo 'sign up'
+                        if ( 1 == 2) {
+                            echo $row['hostName']
                         } else {
-                            echo 'host team'
+                            echo $row['hostTeam']
                         }
                     ?>
                 </div>
