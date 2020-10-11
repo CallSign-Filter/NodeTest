@@ -149,7 +149,7 @@ $row = mysqli_fetch_array($result);
                         if ( 'a' == '') {
                             echo 'sign up'
                         } else {
-                            echo $row['hostTeam']
+                            echo 'host team'
                         }
                     ?>
                 </div>
