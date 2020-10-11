@@ -141,7 +141,18 @@ $row = mysqli_fetch_array($result);
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php if (strlen(trim($row['hostName'])) == 0) { ?>
-                    <a>sign up</a>
+                    <form action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
+                        <input type="hidden" id="bbqDayId" name="bbqDayId" value="<?php echo $row['bbqDayId']?>"/>
+                        <p>
+                            <label for="hostName">Host Name:</label>
+                            <input type="text" name="hostName" id="hostName">
+                        </p>
+                        <p>
+                            <label for="hostTeam">Host Team:</label>
+                            <input type="text" name="hostTeam" id="hostTeam">
+                        </p>
+                        <input type="submit" value="Submit">
+                    </form>
                     <?php } else { echo $row['hostName'] . ' ' . $row['hostTeam']; }?>
                 </div>
             <?php } mysqli_close($conn); ?>
