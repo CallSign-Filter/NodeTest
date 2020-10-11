@@ -145,7 +145,11 @@ $row = mysqli_fetch_array($result);
                     <div class="calendar" style="padding-top: 5px">
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
-                    <?php echo if($row['hostName'] == '') {'sign up'} else { . ' ' . $row['hostTeam'] }?>
+                    <?php echo if($row['hostName'] == '') {
+                                    'sign up'
+                                    } else {
+                                     ' ' . $row['hostTeam']
+                                      }?>
                 </div>
             <?php } mysqli_close($conn); ?>
             </article>
