@@ -135,11 +135,6 @@ $row = mysqli_fetch_array($result);
             </article>
 
             <article class="artBg">
-             <?php foreach($array as $key=>$value): ?>
-                <tr>
-                    <td><?php echo $key; ?></td>
-                </tr>
-                <?php endforeach; ?>
             <?php while ($row = mysqli_fetch_array($result)) {?>
                 <div class="float-child calendarDate">
                     <div class="calendar" style="padding-top: 5px">
@@ -147,7 +142,7 @@ $row = mysqli_fetch_array($result);
                     </div>
                     <?php if (strlen(trim($row['hostName'])) == 0) { ?>
                     <a>sign up</a>
-                    <?php } else { echo $row['hostName'] . ' ' . $row['hostTeam'] }?>
+                    <?php } else { echo $row['hostName'] . ' ' . $row['hostTeam']; }?>
                 </div>
             <?php } mysqli_close($conn); ?>
             </article>
