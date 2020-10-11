@@ -142,8 +142,8 @@ $row = mysqli_fetch_array($result);
                 <?php endforeach; ?>
             <?php while ($row = mysqli_fetch_array($result)) {?>
                 <div class="float-child calendarDate">
-                    <div class="calendar">
-                        <a class="center" style="padding-top: 2px"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
+                    <div class="calendar" style="padding-top: 5px">
+                        <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php echo $row['hostName'] . ' ' . $row['hostTeam'] ?>
                 </div>
