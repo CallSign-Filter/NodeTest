@@ -30,6 +30,12 @@ $row = mysqli_fetch_array($result);
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+    form.smform input {
+        font-size: 10px
+    }
+    form.smform label {
+            font-size: 10px
+        }
         img {
             width: 100%;
             max-width: 100%;
@@ -141,15 +147,13 @@ $row = mysqli_fetch_array($result);
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
                     <?php if (strlen(trim($row['hostName'])) == 0) { ?>
-                    <form action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
+                    <form class="smform" action="insert.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 30)">
                         <input type="hidden" id="bbqDayId" name="bbqDayId" value="<?php echo $row['bbqDayId']?>"/>
                         <p>
-                            <label for="hostName">Host Name:</label>
-                            <input type="text" name="hostName" id="hostName">
+                            <input type="text" name="hostName" id="hostName" style="placeholder: 'Host Name'">
                         </p>
                         <p>
-                            <label for="hostTeam">Host Team:</label>
-                            <input type="text" name="hostTeam" id="hostTeam">
+                            <input type="text" name="hostTeam" id="hostTeam" style="placeholder: 'Host Team'">
                         </p>
                         <input type="submit" value="Submit">
                     </form>
