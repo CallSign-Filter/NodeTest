@@ -30,6 +30,9 @@ $row = mysqli_fetch_array($result);
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+        form.smform {
+            margin: 0;
+        }
         input.smform {
             font-size: 10px;
             height: 35px;
@@ -73,7 +76,7 @@ $row = mysqli_fetch_array($result);
                 width: 50%;
             }
             .calendarDate {
-                height: 10em;
+                height: 11em;
             }
             .calendar {
                 height: 3em;
