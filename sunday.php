@@ -145,7 +145,7 @@ $row = mysqli_fetch_array($result);
                     <div class="calendar" style="padding-top: 5px">
                         <a class="center"><?php echo $row['fantasyWeek']?>: <?php echo substr($row['bbqDate'], 5)?></a>
                     </div>
-                    <?php echo ("a" = "b") ? 1 : 2 ?>
+                    <?php echo ("a" == "b") ? <a>1</a> : <a>2</a> ?>
                 </div>
             <?php } mysqli_close($conn); ?>
             </article>
