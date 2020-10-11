@@ -26,6 +26,7 @@ $hostTeam = mysqli_real_escape_string($conn, $_REQUEST['hostTeam']);
 $sql = "UPDATE bbq_day SET hostName= '$hostName', hostTeam = '$hostTeam' WHERE bbqDayId= $bbqDayId";
 if(mysqli_query($conn, $sql)){
     echo "Records added successfully.";
+    header('Location: http://fantasyfootballfamily.com/sunday.php');
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
