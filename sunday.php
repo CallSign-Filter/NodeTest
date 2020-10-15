@@ -29,6 +29,7 @@ $row = mysqli_fetch_array($result);
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="google" content="notranslate">
     <style>
 
         input.smform {
