@@ -122,11 +122,12 @@ $row = mysqli_fetch_array($result);
     <!-- Nav -->
     <nav id="nav">
         <ul class="links">
-            <li><a href="/">Fantasy 2020</a></li>
+            <li><a href="/">Fantasy 2021</a></li>
+            <li><a href="fantasy2020.html">Fantasy 2020</a></li>
             <li><a href="fantasy2019.html">Fantasy 2019</a></li>
             <li><a href="fantasy2018.html">Fantasy 2018</a></li>
             <li><a href="fantasy2017.html">Fantasy 2017</a></li>
-            <li class="active"><a href="sunday.php">Sunday Sign-up</a></li>
+            <li class="active"><a href="sunday.html">Sunday Sign-up</a></li>
         </ul>
     </nav>
 
