@@ -35,13 +35,16 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .float-container {
-            padding: 20px;
+            padding: 10px;
         }
 
         .float-child {
-            width: 50%;
+            max-width: 400px;
             float: left;
-            padding: 20px;
+            padding: 10px;
+        }
+        .inline-block {
+        	display: inline-block;
         }
     </style>
 </head>
@@ -91,16 +94,14 @@
 			<br/>
 			<hr/>
 			<article>
-				<div class="float-child">
+				<div class="float-child inline-block" style="max-width: 350px">
 					<img src="../images/trophy.png">
 				</div>
-
-				<div class="float-child">
-					<img src="../images/ring.png">
-				</div>
-
-				<div class="float-child">
+				<div class="float-child inline-block" style="max-width: 200px">
 					<img src="../images/updatedWinners.jpg">
+				</div>
+				<div class="float-child inline-block"  style="max-width: 340px">
+					<img src="../images/ring.png">
 				</div>
 			</article>
 		</article>
