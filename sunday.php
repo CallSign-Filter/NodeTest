@@ -15,9 +15,16 @@ mysqli_query($conn, $query) or die('Error querying database.');
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 ?>
+<script src="components/nav.js" type="text/javascript" defer></script>
+<script>
+	function activeNavTab() {
+		let tab = document.getElementById('navSunday');
+		tab.className += 'active'
+	};
+</script>
 <html>
 <head>
-    <title>Brandon Hessler</title>
+    <title>BCC FFB</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -110,27 +117,14 @@ $row = mysqli_fetch_array($result);
         }
     </style>
 </head>
-<body class="is-preload">
+<body onload="activeNavTab()" class="is-preload">
 
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
     <div style="float: right; color: #fff">Version 1.0.3</div>
-    <!-- Header -->
-    <header id="header">
-        <a href="/fantasy.html" class="logo">Fantasy Football</a>
-    </header>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li><a href="/">Fantasy 2021</a></li>
-            <li><a href="fantasy2020.html">Fantasy 2020</a></li>
-            <li><a href="fantasy2019.html">Fantasy 2019</a></li>
-            <li><a href="fantasy2018.html">Fantasy 2018</a></li>
-            <li><a href="fantasy2017.html">Fantasy 2017</a></li>
-            <li class="active"><a href="sunday.html">Sunday Sign-up</a></li>
-        </ul>
-    </nav>
+    <!-- Header & Nav-->
+    <nav-bar-menu></nav-bar-menu>
 
     <!-- Main -->
 

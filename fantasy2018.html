@@ -6,9 +6,16 @@
 	This is page 1
 	380.l.368174
 -->
+<script src="components/nav.js" type="text/javascript" defer></script>
+<script>
+    function activeNavTab() {
+        let tab = document.getElementById('nav2018');
+        tab.className += 'active'
+    };
+</script>
 <html>
 <head>
-    <title>Brandon Hessler</title>
+    <title>BCC FFB</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -32,28 +39,13 @@
         }
     </style>
 </head>
-<body class="is-preload">
+<body onload="activeNavTab()" class="is-preload">
 
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-    <!-- Header -->
-    <header id="header">
-        <a style="color: red; border-color: darkblue; background-color: whitesmoke" href="/fantasy.html" class="logo">B.C.C. Fantasy Football</a>
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li><a href="fantasy.html">Fantasy 2022</a></li>
-            <li><a href="fantasy2021.html">2021</a></li>
-            <li><a href="fantasy2020.html">2020</a></li>
-            <li><a href="fantasy2019.html">2019</a></li>
-            <li class="active"><a href="fantasy2018.html">2018</a></li>
-            <li><a href="fantasy2017.html">2017</a></li>
-            <li><a href="sunday.html">Sunday Sign-up</a></li>
-        </ul>
-    </nav>
+    <!-- Header & Nav-->
+    <nav-bar-menu></nav-bar-menu>
 
     <!-- Main -->
 
