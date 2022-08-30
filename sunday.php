@@ -15,7 +15,7 @@ mysqli_query($conn, $query) or die('Error querying database.');
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 ?>
-<script src="components/nav.js" type="text/javascript" defer></script>
+<script src="components/nav.js" type="text/javascript"></script>
 <script>
 	function activeNavTab() {
 		let tab = document.getElementById('navSunday');
