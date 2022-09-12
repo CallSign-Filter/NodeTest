@@ -20,7 +20,7 @@ class NavBarMenu extends HTMLElement {
                 <li id="nav2018"><a href="fantasy2018.html">2018</a></li>
                 <li id="nav2017"><a href="fantasy2017.html">2017</a></li>
                 <li id="navMedal"><a href="medalCount.html">Medal Count</a></li>
-                <li id="navSunday"><a href="sunday.html">Sunday Sign-up</a></li>
+<!--                <li id="navSunday"><a href="sunday.html">Sunday Sign-up</a></li>-->
             </ul>
         </nav>
         `
