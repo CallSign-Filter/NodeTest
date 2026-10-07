@@ -13,7 +13,7 @@ class NavBarMenu extends HTMLElement {
 
         <nav id="nav">
             <ul class="links">
-                <li id="nav2026"><a href="index.html">Fantasy 2026</a></li>
+                <li id="nav2026"><a href="index.html"><b>Fantasy 2026<b></a></li>
                 <li id="nav2025"><a href="fantasy2025.html">2025</a></li>
                 <li id="nav2024"><a href="fantasy2024.html">2024</a></li>
                 <li id="nav2023"><a href="fantasy2023.html">2023</a></li>
